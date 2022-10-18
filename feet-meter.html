@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi feet và meter</title>
+</head>
+<body>
+    <h2>Chuyển đổi giữa feet và meter</h2>
+<table>
+    <tr>
+        <td>Feet</td>
+        <td><input type="number" onchange="changemeter()" id="feet" placeholder="feet"></td>
+        <td>Meters =</td>
+        <td><div id="rustm"></div></td>
+    </tr>
+    <tr>
+        <td>Meters</td>
+        <td><input type="number" onchange="changemeter()" id="meter" placeholder="meter"></td>
+        <td style="text-align: right">Feet =</td>
+        <td><div id="rustf"></div></td>
+    </tr>
+</table>
+<script>
+    function changemeter() {
+        let feet = document.getElementById('feet').value;
+        let meter = document.getElementById('meter').value;
+        let rusm = feet * 0.305
+        let rusf = meter * 3.279
+        document.getElementById('rustm').innerHTML = rusm
+        document.getElementById('rustf').innerHTML = rusf
+    }
+</script>
+</body>
+</html>
